@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        box-sizing: border-box;
+        color: white;
+    }
+    body{
+        background-color:beige;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    .innerbox{
+        background-color: rgb(105, 250, 206);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 300px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+    .ani{
+        background-color: rgba(46, 46, 46);
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 15px 22px;
+        clip-path: ellipse(20px 20px at 92% 6%);
+        height: 400px;
+        width: 400px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .ani:hover{
+        clip-path: ellipse(400px 400px at 10% 20%);
+        transition: clip-path 300ms ease-out;
+    }
+    .i{
+        position: fixed;
+    }
+    .tex{
+        position: fixed;
+        padding: 50px 110px ;
+    }
+    .trcont{
+        color: black;
+        position: absolute;
+        width: 300px;
+        height: 150px;
+        padding: 15px;
+        z-index: 0;
+    }
+    .trcont>strong{
+        color:black;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <span class="innerbox">
+            <span class="ani">
+                <a class="i">i</a>
+                <a class="tex">info</a>
+            </span>
+            <span class="trcont">
+                <strong>clip-path</strong><br>
+The clip-path CSS property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden.
+            </span>
+        </span>
+    </div>
+</body>
+</html>
