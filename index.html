@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,25 @@
     <title>style</title>
 </head>
 <style>
-    *{
+    * {
         margin: 0;
         box-sizing: border-box;
         color: white;
     }
-    body{
-        background-color:beige;
+
+    body {
+        background-color: beige;
     }
-    .container{
+
+    .container {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100vw;
         height: 100vh;
     }
-    .innerbox{
+
+    .innerbox {
         background-color: rgb(105, 250, 206);
         display: flex;
         justify-content: flex-start;
@@ -32,8 +36,10 @@
         overflow: hidden;
         border-radius: 5px;
     }
-    .ani{
-        background-color: rgba(46, 46, 46);
+
+    .ani {
+        /* background-color: rgba(46, 46, 46); */
+        background-color: black;
         display: flex;
         justify-content: flex-end;
         align-items: flex-start;
@@ -44,19 +50,24 @@
         cursor: pointer;
         z-index: 1;
     }
-    .ani:hover{
+
+    .ani:hover {
+        background-color: cyan;
         clip-path: ellipse(400px 400px at 10% 20%);
         transition: clip-path 300ms ease-out;
         animation: anime 1000ms ease-out infinite;
     }
-    .i{
+
+    .i {
         position: fixed;
     }
-    .tex{
+
+    .tex {
         position: fixed;
-        padding: 50px 110px ;
+        padding: 50px 110px;
     }
-    .trcont{
+
+    .trcont {
         color: black;
         position: absolute;
         width: 300px;
@@ -64,59 +75,79 @@
         padding: 25px 10px;
         z-index: 0;
     }
-    .trcont>strong{
-        color:black;
+
+    .trcont>strong {
+        color: black;
     }
 
     @keyframes anime {
-        0%{
-            /* clip-path:ellipse(20px 20px at 92% 6%); */
+
+        /* 0% {            
             background-color: violet;
         }
-        10%{
+
+        10% {
             background-color: indigo;
         }
-        20%{
+
+        20% {
             background-color: blue;
         }
-        30%{
+
+        30% {
             background-color: green;
         }
-        40%{
+
+        40% {
             background-color: yellow;
         }
-        50%{
-            /* clip-path:ellipse(400px 400px at 10% 20%); */
+
+        50% {            
             background-color: orange;
         }
-        60%{
+
+        60% {
             background-color: red;
-        }70%{
-            background-color: orange;
-            
-        }80%{
-            background-color: yellow;
-            
-        }90%{
-            background-color: green;
-            
         }
-        92%{
-            /* clip-path:ellipse(20px 20px at 92% 6%); */
+
+        70% {
+            background-color: orange;
+
+        }
+
+        80% {
+            background-color: yellow;
+
+        }
+
+        90% {
+            background-color: green;
+
+        }
+
+        92% {            
             background-color: blue;
         }
-        94%{
-            /* clip-path:ellipse(20px 20px at 92% 6%); */
+
+        94% {            
             background-color: indigo;
-            
+
         }
-        100%{
+
+        100% {
             background-color: violet;
 
+        } */
+        0% {
+            filter: hue-rotate(0deg);
+        }
+
+        100% {
+            filter: hue-rotate(360deg);
         }
     }
-
 </style>
+
 <body>
     <div class="container">
         <span class="innerbox">
@@ -126,9 +157,11 @@
             </span>
             <span class="trcont">
                 <strong>clip-path</strong><br>
-The clip-path CSS property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden.
+                The clip-path CSS property creates a clipping region that sets what part of an element should be shown.
+                Parts that are inside the region are shown, while those outside are hidden.
             </span>
         </span>
     </div>
 </body>
+
 </html>
